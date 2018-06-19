@@ -17,6 +17,14 @@ class SettingsViewController: UIViewController{
         super.viewDidLoad()
         super.title = "Réglages"
         print("SettingsViewController has been loaded")
+        addBackgroundImage(name: "mountain1.png")
+    }
+    
+    func addBackgroundImage(name: String){
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: name)
+        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
     }
     
     override func viewDidAppear(_ animated: Bool) {
