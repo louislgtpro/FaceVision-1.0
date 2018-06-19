@@ -1,0 +1,60 @@
+
+/* Class = "UIButton"; normalTitle = "Retour"; ObjectID = "4ti-MR-V9M"; */
+"4ti-MR-V9M.normalTitle" = "Retour";
+
+/* Class = "UIButton"; normalTitle = "Refuser"; ObjectID = "5CD-b6-vbZ"; */
+"5CD-b6-vbZ.normalTitle" = "Refuser";
+
+/* Class = "UITextView"; text = "Date d'entrée en vigueur : 14 Juin 2018"; ObjectID = "7NU-Ll-udM"; */
+"7NU-Ll-udM.text" = "Date d'entrée en vigueur : 14 Juin 2018";
+
+/* Class = "UITextView"; text = "FaceVision CGU/CGV et Mentions légales"; ObjectID = "DgZ-ni-VBi"; */
+"DgZ-ni-VBi.text" = "FaceVision CGU/CGV et Mentions légales";
+
+/* Class = "UINavigationItem"; title = "Menu principal"; ObjectID = "G4t-Bd-XHA"; */
+"G4t-Bd-XHA.title" = "Menu principal";
+
+/* Class = "UITextView"; text = "Préambule  BV au capitale de 2 500 € RCS Antwerp Metropoliten 439 3233 2332 4424009 N°TVA : BE119894781 Siège social : Wilrijkstraat 26, 2140 Antwerpen, België  FaceVision est une personne morale représentée par Louis LEGOUT                                         ---  1. Utilisation, droits et devoirs :  Toute personne venant à utiliser l'application se doit d'avoir au préalable accepter non conditions d'utilisations sinon la personne se vera dans l'obligation de ne pas utiliser l'application. Un popup vous oblige a valider les conditions générales d'utilisations sans quoi vous vous verrez refuser l'accès à l'application.  Vous n'avez en aucun droit d'usurper, copier ou vous approprier les droits ou le nom de l'application.  Tout plagiat/usurpation/copié/coller est passible de 50 000€ d'amende et 2 ans de prison.  Vous vous devez d'utiliser l'application dans un but non lucratif est dans un cadre personnel et non professionnel. Si vous souhaitez utiliser l'application dans un autre but que celui-ci, merci de nous contacter à facevision@llegout.be.  Le projet est open source, il est donc possible de prendre une partie du code pour votre projet, mais vous n'avez pas le droit de vous y attribuer le bénéfice."; ObjectID = "NWb-75-V5F"; */
+"NWb-75-V5F.text" = "Préambule  BV au capitale de 2 500 € RCS Antwerp Metropoliten 439 3233 2332 4424009 N°TVA : BE119894781 Siège social : Wilrijkstraat 26, 2140 Antwerpen, België  FaceVision est une personne morale représentée par Louis LEGOUT                                         ---  1. Utilisation, droits et devoirs :  Toute personne venant à utiliser l'application se doit d'avoir au préalable accepter non conditions d'utilisations sinon la personne se vera dans l'obligation de ne pas utiliser l'application. Un popup vous oblige a valider les conditions générales d'utilisations sans quoi vous vous verrez refuser l'accès à l'application.  Vous n'avez en aucun droit d'usurper, copier ou vous approprier les droits ou le nom de l'application.  Tout plagiat/usurpation/copié/coller est passible de 50 000€ d'amende et 2 ans de prison.  Vous vous devez d'utiliser l'application dans un but non lucratif est dans un cadre personnel et non professionnel. Si vous souhaitez utiliser l'application dans un autre but que celui-ci, merci de nous contacter à facevision@llegout.be.  Le projet est open source, il est donc possible de prendre une partie du code pour votre projet, mais vous n'avez pas le droit de vous y attribuer le bénéfice.";
+
+/* Class = "UITextView"; text = "Bonjour et bienvenue les règles ci-dessous ont été écrites dans l'optique de vous faire comprendre le but et le fonctionnement de l'application ainsi que les éventuels collections de données. Les CGU/CGV ainsi que les mentions légales doivent être acceptées avant de pouvoir utiliser l'application, sinon vous vous verrez dans l'obligation, si vous refusez les règles de ne pas pouvoir utiliser l'application. Prenez soin de lire les règles jusqu'au bout. "; ObjectID = "PLB-WM-fVr"; */
+"PLB-WM-fVr.text" = "Bonjour et bienvenue les règles ci-dessous ont été écrites dans l'optique de vous faire comprendre le but et le fonctionnement de l'application ainsi que les éventuels collections de données. Les CGU/CGV ainsi que les mentions légales doivent être acceptées avant de pouvoir utiliser l'application, sinon vous vous verrez dans l'obligation, si vous refusez les règles de ne pas pouvoir utiliser l'application. Prenez soin de lire les règles jusqu'au bout. ";
+
+/* Class = "UITextView"; text = "Version actuelle de l'app : 1.0B\\(appVersion)"; ObjectID = "VFK-ts-TPm"; */
+"VFK-ts-TPm.text" = "Version actuelle de l'app : 1.0B\\(appVersion)";
+
+/* Class = "UIButton"; normalTitle = "Changelog"; ObjectID = "ZnG-C2-cAM"; */
+"ZnG-C2-cAM.normalTitle" = "Changelog";
+
+/* Class = "UIButton"; normalTitle = "Prendre une photo"; ObjectID = "bK2-Yb-FPY"; */
+"bK2-Yb-FPY.normalTitle" = "Prendre une photo";
+
+/* Class = "UIButton"; normalTitle = "Retour"; ObjectID = "bRJ-HK-VSL"; */
+"bRJ-HK-VSL.normalTitle" = "Retour";
+
+/* Class = "UIButton"; normalTitle = "CGU/CGV"; ObjectID = "fMO-tb-Sw9"; */
+"fMO-tb-Sw9.normalTitle" = "CGU/CGV";
+
+/* Class = "UITextView"; text = "FaceVision"; ObjectID = "glF-Oi-H6N"; */
+"glF-Oi-H6N.text" = "FaceVision";
+
+/* Class = "UITextView"; text = "_______________________________________________"; ObjectID = "i1R-A6-b9D"; */
+"i1R-A6-b9D.text" = "_______________________________________________";
+
+/* Class = "UIButton"; normalTitle = "Réglages"; ObjectID = "rfR-GV-Oa1"; */
+"rfR-GV-Oa1.normalTitle" = "Réglages";
+
+/* Class = "UIButton"; normalTitle = "Plus d'infos"; ObjectID = "uEt-q6-7v8"; */
+"uEt-q6-7v8.normalTitle" = "Plus d'infos";
+
+/* Class = "UIButton"; normalTitle = "Fermer"; ObjectID = "uY7-T7-yCx"; */
+"uY7-T7-yCx.normalTitle" = "Fermer";
+
+/* Class = "UIButton"; normalTitle = "Lancer"; ObjectID = "xVm-zj-600"; */
+"xVm-zj-600.normalTitle" = "Lancer";
+
+/* Class = "UITextView"; text = "Préambule  BV au capitale de 2 500 € RCS Antwerp Metropoliten 439 3233 2332 4424009 N°TVA : BE119894781 Siège social : Wilrijkstraat 26, 2140 Antwerpen, België  FaceVision est une personne morale représentée par Louis LEGOUT                                         ---  1. Utilisation, droits et devoirs :  Toute personne venant à utiliser l'application se doit d'avoir au préalable accepter non conditions d'utilisations sinon la personne se vera dans l'obligation de ne pas utiliser l'application. Un popup vous oblige a valider les conditions générales d'utilisations sans quoi vous vous verrez refuser l'accès à l'application.  Vous n'avez en aucun droit d'usurper, copier ou vous approprier les droits ou le nom de l'application.  Tout plagiat/usurpation/copié/coller est passible de 50 000€ d'amende et 2 ans de prison.  Vous vous devez d'utiliser l'application dans un but non lucratif est dans un cadre personnel et non professionnel. Si vous souhaitez utiliser l'application dans un autre but que celui-ci, merci de nous contacter à facevision@llegout.be.  Le projet est open source, il est donc possible de prendre une partie du code pour votre projet, mais vous n'avez pas le droit de vous y attribuer le bénéfice."; ObjectID = "y2I-la-t2g"; */
+"y2I-la-t2g.text" = "Préambule  BV au capitale de 2 500 € RCS Antwerp Metropoliten 439 3233 2332 4424009 N°TVA : BE119894781 Siège social : Wilrijkstraat 26, 2140 Antwerpen, België  FaceVision est une personne morale représentée par Louis LEGOUT                                         ---  1. Utilisation, droits et devoirs :  Toute personne venant à utiliser l'application se doit d'avoir au préalable accepter non conditions d'utilisations sinon la personne se vera dans l'obligation de ne pas utiliser l'application. Un popup vous oblige a valider les conditions générales d'utilisations sans quoi vous vous verrez refuser l'accès à l'application.  Vous n'avez en aucun droit d'usurper, copier ou vous approprier les droits ou le nom de l'application.  Tout plagiat/usurpation/copié/coller est passible de 50 000€ d'amende et 2 ans de prison.  Vous vous devez d'utiliser l'application dans un but non lucratif est dans un cadre personnel et non professionnel. Si vous souhaitez utiliser l'application dans un autre but que celui-ci, merci de nous contacter à facevision@llegout.be.  Le projet est open source, il est donc possible de prendre une partie du code pour votre projet, mais vous n'avez pas le droit de vous y attribuer le bénéfice.";
+
+/* Class = "UIButton"; normalTitle = "Accepter"; ObjectID = "zlc-4i-NrK"; */
+"zlc-4i-NrK.normalTitle" = "Accepter";

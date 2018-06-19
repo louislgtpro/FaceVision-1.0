@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ubG-9b-8Kv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Legal Accept View Controller-->
+        <scene sceneID="vQl-SU-gcH">
+            <objects>
+                <viewController storyboardIdentifier="LegalAcceptViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ubG-9b-8Kv" customClass="LegalAcceptViewController" customModule="FaceVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2RQ-iW-sFg"/>
+                        <viewControllerLayoutGuide type="bottom" id="7ZO-pD-UD4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FVS-qR-PYZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlc-4i-NrK">
+                                <rect key="frame" x="297" y="617" width="62" height="30"/>
+                                <state key="normal" title="Accepter"/>
+                                <connections>
+                                    <action selector="acceptTermsButton:" destination="ubG-9b-8Kv" eventType="touchUpInside" id="pyI-EY-nV3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CD-b6-vbZ">
+                                <rect key="frame" x="16" y="617" width="53" height="30"/>
+                                <state key="normal" title="Refuser"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2I-la-t2g">
+                                <rect key="frame" x="16" y="60" width="343" height="549"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Préambule  BV au capitale de 2 500 € RCS Antwerp Metropoliten 439 3233 2332 4424009 N°TVA : BE119894781 Siège social : Wilrijkstraat 26, 2140 Antwerpen, België  FaceVision est une personne morale représentée par Louis LEGOUT                                         ---  1. Utilisation, droits et devoirs :  Toute personne venant à utiliser l'application se doit d'avoir au préalable accepter non conditions d'utilisations sinon la personne se vera dans l'obligation de ne pas utiliser l'application. Un popup vous oblige a valider les conditions générales d'utilisations sans quoi vous vous verrez refuser l'accès à l'application.  Vous n'avez en aucun droit d'usurper, copier ou vous approprier les droits ou le nom de l'application.  Tout plagiat/usurpation/copié/coller est passible de 50 000€ d'amende et 2 ans de prison.  Vous vous devez d'utiliser l'application dans un but non lucratif est dans un cadre personnel et non professionnel. Si vous souhaitez utiliser l'application dans un autre but que celui-ci, merci de nous contacter à facevision@llegout.be.  Le projet est open source, il est donc possible de prendre une partie du code pour votre projet, mais vous n'avez pas le droit de vous y attribuer le bénéfice.</string>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="FaceVision" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glF-Oi-H6N">
+                                <rect key="frame" x="16" y="20" width="343" height="46"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="i4J-fV-K2H"/>
+                                </constraints>
+                                <color key="textColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="24.5"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="5CD-b6-vbZ" secondAttribute="bottom" constant="20" symbolic="YES" id="JNI-Sa-yJN"/>
+                            <constraint firstItem="y2I-la-t2g" firstAttribute="leading" secondItem="5CD-b6-vbZ" secondAttribute="leading" id="KBp-xr-jl4"/>
+                            <constraint firstItem="glF-Oi-H6N" firstAttribute="trailing" secondItem="FVS-qR-PYZ" secondAttribute="trailingMargin" id="P0z-jL-BDg"/>
+                            <constraint firstItem="glF-Oi-H6N" firstAttribute="leading" secondItem="FVS-qR-PYZ" secondAttribute="leadingMargin" id="Phv-ZX-mbL"/>
+                            <constraint firstItem="5CD-b6-vbZ" firstAttribute="baseline" secondItem="zlc-4i-NrK" secondAttribute="baseline" id="SyT-6d-1i5"/>
+                            <constraint firstItem="y2I-la-t2g" firstAttribute="trailing" secondItem="zlc-4i-NrK" secondAttribute="trailing" id="UkJ-eS-KCM"/>
+                            <constraint firstItem="glF-Oi-H6N" firstAttribute="top" secondItem="2RQ-iW-sFg" secondAttribute="bottom" id="dVb-31-Pu3"/>
+                            <constraint firstItem="glF-Oi-H6N" firstAttribute="leading" secondItem="y2I-la-t2g" secondAttribute="leading" id="mCf-QN-MKF"/>
+                            <constraint firstItem="glF-Oi-H6N" firstAttribute="trailing" secondItem="y2I-la-t2g" secondAttribute="trailing" id="mQD-qe-sk8"/>
+                            <constraint firstItem="y2I-la-t2g" firstAttribute="top" secondItem="2RQ-iW-sFg" secondAttribute="bottom" constant="40" id="pab-Sd-Fnw"/>
+                            <constraint firstItem="5CD-b6-vbZ" firstAttribute="top" secondItem="y2I-la-t2g" secondAttribute="bottom" constant="8" symbolic="YES" id="rhL-Tn-OHa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showPrincipalMenuSegue" id="FWX-Kv-KHs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bfl-Yv-ivj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1206" y="-279"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="PfD-Qn-a3a">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mbP-31-PZ9" customClass="SettingsViewController" customModule="FaceVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nx9-Fb-wLQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="3yE-nv-13C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7c1-DG-zzO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Réglages (Reconnaissance faciale)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jtz-05-JtL">
+                                <rect key="frame" x="8" y="20" width="358" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activer le cadrage du visage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDK-VX-Hyq">
+                                <rect key="frame" x="79" y="67" width="216" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pA3-yx-Rkg">
+                                <rect key="frame" x="164" y="105" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="SwitchVisage:" destination="mbP-31-PZ9" eventType="valueChanged" id="U7I-BN-UDy"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDq-9B-NxA">
+                                <rect key="frame" x="16" y="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Retour"/>
+                                <connections>
+                                    <action selector="backButton:" destination="mbP-31-PZ9" eventType="touchUpInside" id="Z45-SK-LxA"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backSettingsButtonSegue" id="87x-1z-gdA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="SwitchVisageOutler" destination="pA3-yx-Rkg" id="i40-5K-F9Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8I-vS-tem" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-431.19999999999999" y="-279.31034482758622"/>
+        </scene>
+        <!--Legal View Controller-->
+        <scene sceneID="k9d-pI-KWH">
+            <objects>
+                <viewController storyboardIdentifier="LegalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SMA-qy-Cvg" customClass="LegalViewController" customModule="FaceVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QTE-DR-2N3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nwe-pC-6Pn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iQf-Nb-Hx0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ti-MR-V9M">
+                                <rect key="frame" x="16" y="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Retour"/>
+                                <connections>
+                                    <action selector="backButton:" destination="SMA-qy-Cvg" eventType="touchUpInside" id="zwh-s6-hWy"/>
+                                    <segue destination="Gq8-60-ojo" kind="show" identifier="backLegalSegue" id="5aJ-61-Eq6"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="________________" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1R-A6-b9D">
+                                <rect key="frame" x="100" y="78" width="180" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.21859546916414199" green="0.4658849872804095" blue="0.78473121761658038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWb-75-V5F">
+                                <rect key="frame" x="16" y="329" width="343" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Préambule  BV au capitale de 2 500 € RCS Antwerp Metropoliten 439 3233 2332 4424009 N°TVA : BE119894781 Siège social : Wilrijkstraat 26, 2140 Antwerpen, België  FaceVision est une personne morale représentée par Louis LEGOUT                                         ---  1. Utilisation, droits et devoirs :  Toute personne venant à utiliser l'application se doit d'avoir au préalable accepter non conditions d'utilisations sinon la personne se vera dans l'obligation de ne pas utiliser l'application. Un popup vous oblige a valider les conditions générales d'utilisations sans quoi vous vous verrez refuser l'accès à l'application.  Vous n'avez en aucun droit d'usurper, copier ou vous approprier les droits ou le nom de l'application.  Tout plagiat/usurpation/copié/coller est passible de 50 000€ d'amende et 2 ans de prison.  Vous vous devez d'utiliser l'application dans un but non lucratif est dans un cadre personnel et non professionnel. Si vous souhaitez utiliser l'application dans un autre but que celui-ci, merci de nous contacter à facevision@llegout.be.  Le projet est open source, il est donc possible de prendre une partie du code pour votre projet, mais vous n'avez pas le droit de vous y attribuer le bénéfice.</string>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" canCancelContentTouches="NO" editable="NO" text="FaceVision CGU/CGV et Mentions légales" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgZ-ni-VBi">
+                                <rect key="frame" x="19" y="14" width="343" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.19262696790111614" green="0.41053921581095809" blue="0.69150744818652843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="24.5"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLB-WM-fVr">
+                                <rect key="frame" x="49" y="157" width="276" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Bonjour et bienvenue les règles ci-dessous ont été écrites dans l'optique de vous faire comprendre le but et le fonctionnement de l'application ainsi que les éventuels collections de données. Les CGU/CGV ainsi que les mentions légales doivent être acceptées avant de pouvoir utiliser l'application, sinon vous vous verrez dans l'obligation, si vous refusez les règles de ne pas pouvoir utiliser l'application. Prenez soin de lire les règles jusqu'au bout. </string>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Date d'entrée en vigueur : 14 Juin 2018" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NU-Ll-udM">
+                                <rect key="frame" x="60" y="106" width="255" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wxI-HI-rQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1206" y="-279"/>
+        </scene>
+        <!--Changelog View Controller-->
+        <scene sceneID="heh-ks-d7c">
+            <objects>
+                <viewController storyboardIdentifier="ChangelogViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gq8-60-ojo" customClass="ChangelogViewController" customModule="FaceVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sQ6-oZ-Swm"/>
+                        <viewControllerLayoutGuide type="bottom" id="U0C-4o-acZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xB9-mX-mbe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRJ-HK-VSL">
+                                <rect key="frame" x="16" y="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Retour"/>
+                                <connections>
+                                    <action selector="backActionButton:" destination="rZh-Cc-2Zg" eventType="touchUpInside" id="RKo-kf-G0P"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backButtonSegue" id="OIM-jf-Afv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnG-C2-cAM">
+                                <rect key="frame" x="124.5" y="267" width="126" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Changelog">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeLog1:" destination="Gq8-60-ojo" eventType="touchUpInside" id="YK3-Vf-QYu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMO-tb-Sw9">
+                                <rect key="frame" x="124.5" y="322" width="126" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="CGU/CGV">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SMA-qy-Cvg" kind="show" identifier="legalPerformSegue" id="xMV-rH-qN4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnq-gC-b58">
+                                <rect key="frame" x="124.5" y="212" width="126" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Mise à jour">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="majButtonAction:" destination="Gq8-60-ojo" eventType="touchUpInside" id="OeW-Ya-Eif"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="Wgx-Fo-3SQ">
+                        <barButtonItem key="backBarButtonItem" title="Retour" id="aZJ-nz-bnm"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="changeLogButton" destination="ZnG-C2-cAM" id="NBJ-pr-SBR"/>
+                        <outlet property="firstView" destination="xB9-mX-mbe" id="dBU-K8-Jne"/>
+                        <outlet property="legalTermsButton" destination="fMO-tb-Sw9" id="5uZ-UG-HVN"/>
+                        <outlet property="majButton" destination="jnq-gC-b58" id="kGj-OP-xJG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2si-b0-jOL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="rZh-Cc-2Zg" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="-279"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bK2-Yb-FPY">
+                                <rect key="frame" x="108" y="307" width="159" height="53"/>
+                                <color key="backgroundColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Prendre une photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TbO-PP-eoj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEt-q6-7v8">
+                                <rect key="frame" x="143" y="224" width="89" height="35"/>
+                                <color key="backgroundColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="UOw-B1-O6C"/>
+                                </constraints>
+                                <state key="normal" title="Plus d'infos">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeLogButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vxb-aZ-X50"/>
+                                    <segue destination="Gq8-60-ojo" kind="show" identifier="changelogViewSegue" id="NK0-qJ-llw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfR-GV-Oa1">
+                                <rect key="frame" x="143" y="181" width="89" height="35"/>
+                                <color key="backgroundColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="4f6-RZ-HBE"/>
+                                    <constraint firstAttribute="height" constant="35" id="nHZ-wn-l50"/>
+                                </constraints>
+                                <state key="normal" title="Réglages">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SxN-ub-v1j"/>
+                                    <segue destination="mbP-31-PZ9" kind="show" identifier="showSettingsSegue" id="Yi6-Dq-V5z"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Version : " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFK-ts-TPm">
+                                <rect key="frame" x="116.5" y="267" width="142" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="XDP-4H-3mX"/>
+                                    <constraint firstAttribute="height" constant="32" id="oue-5Y-NeU"/>
+                                </constraints>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bK2-Yb-FPY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="92" id="4lF-EZ-ttZ"/>
+                            <constraint firstItem="bK2-Yb-FPY" firstAttribute="top" secondItem="VFK-ts-TPm" secondAttribute="bottom" constant="8" symbolic="YES" id="72C-KA-Kh6"/>
+                            <constraint firstItem="VFK-ts-TPm" firstAttribute="centerX" secondItem="uEt-q6-7v8" secondAttribute="centerX" id="8JL-uY-6rA"/>
+                            <constraint firstItem="rfR-GV-Oa1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LtR-J2-uPm"/>
+                            <constraint firstItem="VFK-ts-TPm" firstAttribute="top" secondItem="uEt-q6-7v8" secondAttribute="bottom" constant="8" symbolic="YES" id="OHH-AG-zPg"/>
+                            <constraint firstItem="uEt-q6-7v8" firstAttribute="trailing" secondItem="rfR-GV-Oa1" secondAttribute="trailing" id="QXa-zp-KBv"/>
+                            <constraint firstItem="bK2-Yb-FPY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bme-Ys-jZc"/>
+                            <constraint firstItem="uEt-q6-7v8" firstAttribute="leading" secondItem="rfR-GV-Oa1" secondAttribute="leading" id="grS-6J-qCj"/>
+                            <constraint firstItem="bK2-Yb-FPY" firstAttribute="centerX" secondItem="VFK-ts-TPm" secondAttribute="centerX" id="nzy-Xk-7b4"/>
+                            <constraint firstItem="uEt-q6-7v8" firstAttribute="top" secondItem="rfR-GV-Oa1" secondAttribute="bottom" constant="8" symbolic="YES" id="o1M-PZ-n9h"/>
+                            <constraint firstItem="rfR-GV-Oa1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="161" id="qdu-vw-V4l"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="firstView" destination="8bC-Xf-vdC" id="XXe-hb-Ysq"/>
+                        <outlet property="moreInformationPlusButton" destination="uEt-q6-7v8" id="bm9-06-0Uu"/>
+                        <outlet property="settingsPlusButton" destination="rfR-GV-Oa1" id="klO-rf-tv6"/>
+                        <outlet property="takePhotoButton" destination="bK2-Yb-FPY" id="fOs-8O-R76"/>
+                        <outlet property="textVersionView" destination="VFK-ts-TPm" id="KQB-7n-HT3"/>
+                        <segue destination="5mt-CK-KdS" kind="presentation" identifier="showImageSegue" id="Wea-lo-ESI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-479" y="496"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="kHS-TB-aDF">
+            <objects>
+                <viewController id="5mt-CK-KdS" customClass="ImageViewController" customModule="FaceVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UpD-aj-jI8"/>
+                        <viewControllerLayoutGuide type="bottom" id="sp2-vT-Cdg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RbN-uO-qII">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IWz-g9-fZO">
+                                <rect key="frame" x="16" y="20" width="343" height="578"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVm-zj-600">
+                                <rect key="frame" x="302" y="617" width="57" height="37"/>
+                                <color key="backgroundColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="Npo-xm-3Xb"/>
+                                </constraints>
+                                <state key="normal" title="Lancer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="process:" destination="5mt-CK-KdS" eventType="touchUpInside" id="szj-zV-dZb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uY7-T7-yCx">
+                                <rect key="frame" x="16" y="617" width="61" height="37"/>
+                                <color key="backgroundColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="Oxg-9d-tt3"/>
+                                    <constraint firstAttribute="height" constant="37" id="ciw-kH-We7"/>
+                                </constraints>
+                                <state key="normal" title="Fermer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qZO-xp-E9E" kind="unwind" unwindAction="exitWithUnwindSegue:" id="ZuX-KM-jMt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IWz-g9-fZO" firstAttribute="trailing" secondItem="RbN-uO-qII" secondAttribute="trailingMargin" id="2XT-H8-iT8"/>
+                            <constraint firstItem="IWz-g9-fZO" firstAttribute="top" secondItem="UpD-aj-jI8" secondAttribute="bottom" id="49H-7U-zwi"/>
+                            <constraint firstItem="uY7-T7-yCx" firstAttribute="baseline" secondItem="xVm-zj-600" secondAttribute="firstBaseline" id="VHV-fe-yf6"/>
+                            <constraint firstItem="uY7-T7-yCx" firstAttribute="top" secondItem="xVm-zj-600" secondAttribute="top" id="Xih-QM-Ksj"/>
+                            <constraint firstItem="IWz-g9-fZO" firstAttribute="leading" secondItem="uY7-T7-yCx" secondAttribute="leading" id="Yib-A5-djv"/>
+                            <constraint firstItem="IWz-g9-fZO" firstAttribute="trailing" secondItem="xVm-zj-600" secondAttribute="trailing" id="d85-l1-Hwy"/>
+                            <constraint firstItem="uY7-T7-yCx" firstAttribute="top" secondItem="IWz-g9-fZO" secondAttribute="bottom" constant="19" id="eGz-LK-UVe"/>
+                            <constraint firstItem="IWz-g9-fZO" firstAttribute="leading" secondItem="RbN-uO-qII" secondAttribute="leadingMargin" id="f2n-s4-6sZ"/>
+                            <constraint firstItem="sp2-vT-Cdg" firstAttribute="top" secondItem="uY7-T7-yCx" secondAttribute="bottom" constant="13" id="ifu-KT-07E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="uY7-T7-yCx" id="uwM-gI-QOc"/>
+                        <outlet property="imageView" destination="IWz-g9-fZO" id="5A4-Rm-5Sy"/>
+                        <outlet property="startButton" destination="xVm-zj-600" id="maj-4b-AoZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8k9-x4-6to" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="qZO-xp-E9E" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="502" y="495"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="87x-1z-gdA"/>
+        <segue reference="NK0-qJ-llw"/>
+    </inferredMetricsTieBreakers>
+</document>
