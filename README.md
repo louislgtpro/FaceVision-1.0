@@ -12,6 +12,8 @@ ATENCIÓN: Está estrictamente prohibido apropiarse del código o del proyecto, 
 
 WARNING: It is strictly forbidden to appropriate you the code or the project, if you wish to borrow a piece of code or a class or if you have some questions. Send me a message before you appropriate you the cause, effects.
 
+ATTENTION : Il est strictement interdit de s'approprier le code ou le projet, si vous souhaitez emprunter un bout de code ou une classe ou si vous avez des questions. Envoyez moi un message avant de vous en approprier la cause.
+
 Thank you for your comprehension. 
 
 
