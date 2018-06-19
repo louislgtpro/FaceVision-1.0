@@ -43,7 +43,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         settingsPlusButton.layer.cornerRadius = 7
         settingsPlusButton.layer.borderWidth = 2
         
-        InitializeLoading()
         addBackgroundImage(name: "background1.png")
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.callBackForActiveNotification), name: UIApplication.didBecomeActiveNotification, object: nil)
@@ -115,6 +114,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         if majUpdateCorrectly == false{
             self.succefulUpdate()
+        }else{
+            
         }
         
         if isBetaKeyCorrect == true && popupBetaWelcomeClicked == false{
@@ -145,7 +146,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let changeLogActual = UIAlertController(title: "Mise à jour installée !", message: "Une mise à jour a été installée avec succès, voici le contenu des nouveautés et modifications apportées à la mise à jour V1.0B \(appBuildNumber)\n\n  Modifications et nouveautés :\n\n- Amélioration du design intérieur\n- Amélioration de la propreté du code interne\n- Rapidité et fluidité en terme général amélioré\n- Corrections de bugs et ajout des CGU/Mentions légales\n", preferredStyle: .alert)
         changeLogActual.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (UIAlertAction) in
             UserDefaults.standard.set(true, forKey: "majUpdateCorrectly")
-            
         }))
         self.present(changeLogActual, animated: true)
     }
@@ -163,7 +163,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func alertUpdateAvailable(){
         let alertUpdate = UIAlertController(title: "Une mise à jour est disponible", message: "Une mise à jour de l'application est disponible, voulez-vous la lancer maintenant ?\n\nVersion de la MAJ : 1.0B\(appBuildNumber)\nChangements : ", preferredStyle: .alert)
         alertUpdate.addAction(UIAlertAction(title: "Oui", style: .default, handler: { (UIAlertAction) in
-            self.StartLoadingIndicator()
         }))
         alertUpdate.addAction(UIAlertAction(title: "NON", style: .cancel, handler: { (UIAlertAction) in
             self.checkIfTapNoUpdate = true
@@ -282,41 +281,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func exit(unwindSegue: UIStoryboardSegue) {
         image = nil
-    }
-    
-    @IBAction func StartLoading(_ sender: Any){
-        StartLoadingIndicator()
-    }
-    
-    @IBAction func StopLoading(_ sender: Any){
-        StopLoadingIndicator()
-    }
-    
-    func StartLoadingIndicator(){
-        self.view.addSubview(firstView)
-    }
-    
-    func StopLoadingIndicator(){
-        self.view.removeFromSuperview()
-    }
-    
-    func InitializeLoading(){
-        firstView = UIView(frame: CGRect(x: 0, y:0, width: 250, height: 50))
-        firstView.backgroundColor = UIColor.darkGray
-        firstView.layer.cornerRadius = 10
-        
-        let wait = UIActivityIndicatorView(frame: CGRect(x:0, y:0, width: 50, height: 50))
-        wait.color = UIColor.black
-        wait.hidesWhenStopped = false
-        wait.startAnimating()
-        
-        let text = UILabel(frame: CGRect(x: 60, y: 0, width: 200, height: 50))
-        text.text = "Veuillez patienter..."
-        
-        firstView.addSubview(wait)
-        firstView.addSubview(text)
-        firstView.center = self.view.center
-        firstView.tag = 1000
     }
     
     @IBAction func settingsButton(_ sender: UIButton) {
