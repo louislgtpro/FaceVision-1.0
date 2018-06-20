@@ -308,7 +308,7 @@
                                 <rect key="frame" x="143" y="224" width="89" height="35"/>
                                 <color key="backgroundColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="UOw-B1-O6C"/>
+                                    <constraint firstAttribute="height" constant="35" id="YlH-Hh-Rj2"/>
                                 </constraints>
                                 <state key="normal" title="Plus d'infos">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -322,8 +322,8 @@
                                 <rect key="frame" x="143" y="181" width="89" height="35"/>
                                 <color key="backgroundColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="89" id="4f6-RZ-HBE"/>
-                                    <constraint firstAttribute="height" constant="35" id="nHZ-wn-l50"/>
+                                    <constraint firstAttribute="height" constant="35" id="4he-MO-jzA"/>
+                                    <constraint firstAttribute="width" constant="89" id="x7o-Pi-xbF"/>
                                 </constraints>
                                 <state key="normal" title="Réglages">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -336,27 +336,37 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Version : " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFK-ts-TPm">
                                 <rect key="frame" x="116.5" y="267" width="142" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="142" id="XDP-4H-3mX"/>
-                                    <constraint firstAttribute="height" constant="32" id="oue-5Y-NeU"/>
+                                    <constraint firstAttribute="height" constant="32" id="Vne-06-VE8"/>
+                                    <constraint firstAttribute="width" constant="142" id="yLd-Hy-aNP"/>
                                 </constraints>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FaceVision" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usE-UD-MVX">
+                                <rect key="frame" x="33" y="77" width="308" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bK2-Yb-FPY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="92" id="4lF-EZ-ttZ"/>
-                            <constraint firstItem="bK2-Yb-FPY" firstAttribute="top" secondItem="VFK-ts-TPm" secondAttribute="bottom" constant="8" symbolic="YES" id="72C-KA-Kh6"/>
-                            <constraint firstItem="VFK-ts-TPm" firstAttribute="centerX" secondItem="uEt-q6-7v8" secondAttribute="centerX" id="8JL-uY-6rA"/>
-                            <constraint firstItem="rfR-GV-Oa1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LtR-J2-uPm"/>
-                            <constraint firstItem="VFK-ts-TPm" firstAttribute="top" secondItem="uEt-q6-7v8" secondAttribute="bottom" constant="8" symbolic="YES" id="OHH-AG-zPg"/>
-                            <constraint firstItem="uEt-q6-7v8" firstAttribute="trailing" secondItem="rfR-GV-Oa1" secondAttribute="trailing" id="QXa-zp-KBv"/>
-                            <constraint firstItem="bK2-Yb-FPY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bme-Ys-jZc"/>
-                            <constraint firstItem="uEt-q6-7v8" firstAttribute="leading" secondItem="rfR-GV-Oa1" secondAttribute="leading" id="grS-6J-qCj"/>
-                            <constraint firstItem="bK2-Yb-FPY" firstAttribute="centerX" secondItem="VFK-ts-TPm" secondAttribute="centerX" id="nzy-Xk-7b4"/>
-                            <constraint firstItem="uEt-q6-7v8" firstAttribute="top" secondItem="rfR-GV-Oa1" secondAttribute="bottom" constant="8" symbolic="YES" id="o1M-PZ-n9h"/>
-                            <constraint firstItem="rfR-GV-Oa1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="161" id="qdu-vw-V4l"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bK2-Yb-FPY" secondAttribute="bottom" constant="307" id="7es-3J-30l"/>
+                            <constraint firstItem="bK2-Yb-FPY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7mo-jA-Jtd"/>
+                            <constraint firstItem="rfR-GV-Oa1" firstAttribute="trailing" secondItem="uEt-q6-7v8" secondAttribute="trailing" id="Co7-iy-hpq"/>
+                            <constraint firstItem="rfR-GV-Oa1" firstAttribute="leading" secondItem="uEt-q6-7v8" secondAttribute="leading" id="LiC-jz-DV2"/>
+                            <constraint firstItem="usE-UD-MVX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QnG-AC-i2g"/>
+                            <constraint firstItem="uEt-q6-7v8" firstAttribute="top" secondItem="rfR-GV-Oa1" secondAttribute="bottom" constant="8" symbolic="YES" id="UBV-7f-125"/>
+                            <constraint firstItem="bK2-Yb-FPY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="92" id="WIG-L9-uns"/>
+                            <constraint firstItem="usE-UD-MVX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="57" id="YPZ-kN-OZk"/>
+                            <constraint firstItem="uEt-q6-7v8" firstAttribute="centerX" secondItem="VFK-ts-TPm" secondAttribute="centerX" id="aEB-sM-lRU"/>
+                            <constraint firstItem="VFK-ts-TPm" firstAttribute="centerX" secondItem="bK2-Yb-FPY" secondAttribute="centerX" id="ggl-aa-aOx"/>
+                            <constraint firstItem="usE-UD-MVX" firstAttribute="centerX" secondItem="rfR-GV-Oa1" secondAttribute="centerX" id="l8F-OV-ltf"/>
+                            <constraint firstItem="VFK-ts-TPm" firstAttribute="top" secondItem="uEt-q6-7v8" secondAttribute="bottom" constant="8" symbolic="YES" id="ltW-i1-CuD"/>
+                            <constraint firstItem="rfR-GV-Oa1" firstAttribute="top" secondItem="usE-UD-MVX" secondAttribute="bottom" constant="53" id="m6u-b2-MFg"/>
+                            <constraint firstItem="bK2-Yb-FPY" firstAttribute="top" secondItem="VFK-ts-TPm" secondAttribute="bottom" constant="8" symbolic="YES" id="w9l-DK-1XN"/>
+                            <constraint firstItem="usE-UD-MVX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="x2R-dc-vc3"/>
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
@@ -365,13 +375,14 @@
                         <outlet property="moreInformationPlusButton" destination="uEt-q6-7v8" id="bm9-06-0Uu"/>
                         <outlet property="settingsPlusButton" destination="rfR-GV-Oa1" id="klO-rf-tv6"/>
                         <outlet property="takePhotoButton" destination="bK2-Yb-FPY" id="fOs-8O-R76"/>
+                        <outlet property="textFaceVision" destination="usE-UD-MVX" id="H6L-Hg-zrC"/>
                         <outlet property="textVersionView" destination="VFK-ts-TPm" id="KQB-7n-HT3"/>
                         <segue destination="5mt-CK-KdS" kind="presentation" identifier="showImageSegue" id="Wea-lo-ESI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-479" y="496"/>
+            <point key="canvasLocation" x="-479.19999999999999" y="495.20239880059972"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="kHS-TB-aDF">
@@ -442,6 +453,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Wea-lo-ESI"/>
         <segue reference="hse-1m-tDX"/>
         <segue reference="NK0-qJ-llw"/>
     </inferredMetricsTieBreakers>

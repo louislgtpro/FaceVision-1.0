@@ -59,12 +59,6 @@ class ImageViewController: UIViewController {
             orientation = 1
         }
         
-        if image.imageOrientation.rawValue == 0{
-            let alert = UIAlertController(title: "Erreur", message: "Une erreur est survenue, seul les visages sont compatibles et reconnaissables par FaceVision, ne vous inquiétez pas on travaille sur d'autres possibilités...", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-            self.present(alert, animated: true)
-        }
-        
         // vision
         let faceLandmarksRequest = VNDetectFaceLandmarksRequest(completionHandler: self.handleFaceFeatures)
         let requestHandler = VNImageRequestHandler(cgImage: image.cgImage!, orientation: CGImagePropertyOrientation(rawValue: UInt32(orientation))! ,options: [:])
@@ -73,16 +67,28 @@ class ImageViewController: UIViewController {
             try requestHandler.perform([faceLandmarksRequest])
         } catch {
             let alert = UIAlertController(title: "Erreur", message: "Une erreur est survenue, seul les visages sont compatibles et reconnaissables par FaceVision, ne vous inquiétez pas on travaille sur d'autres possibilités...", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(UIAlertAction) in
+                Foundation.exit(-1)
+            }))
             self.present(alert, animated: true)
             print(error, "An error occured")
+        }
+        //Cheks if it's a valid face of a human
+        if image.imageOrientation.rawValue <= 0{
+            let alert = UIAlertController(title: "Erreur", message: "Une erreur est survenue, seul les visages sont compatibles et reconnaissables par FaceVision, ne vous inquiétez pas on travaille sur d'autres possibilités...", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(UIAlertAction) in
+                Foundation.exit(-1)
+            }))
+            self.present(alert, animated: true)
         }
     }
     
     func handleFaceFeatures(request: VNRequest, errror: Error?) {
         guard let observations = request.results as? [VNFaceObservation]else{
             let alert = UIAlertController(title: "Erreur", message: "Une erreur est survenue, seul les visages sont compatibles et reconnaissables par FaceVision, ne vous inquiétez pas on travaille sur d'autres possibilités...", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(UIAlertAction) in
+                Foundation.exit(-1)
+            }))
             self.present(alert, animated: true)
             fatalError("unexpected result type!")
         }

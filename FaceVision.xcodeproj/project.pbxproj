@@ -10,6 +10,7 @@
 		BF0AE35220C6C6C000A68835 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0AE35120C6C6C000A68835 /* Variables.swift */; };
 		BF3D79D420C68D14008848DD /* ChangelogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D79D320C68D14008848DD /* ChangelogViewController.swift */; };
 		BF4F7EC520DA38AE0061F039 /* ChangelogStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF4F7EC420DA38AE0061F039 /* ChangelogStrings.strings */; };
+		BF4F7EC720DA83E40061F039 /* Multitextcolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F7EC620DA83E40061F039 /* Multitextcolor.swift */; };
 		BF66DE8520D2680F00938637 /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66DE8420D2680F00938637 /* LegalViewController.swift */; };
 		BF66DE8720D292BC00938637 /* LegalAcceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66DE8620D292BC00938637 /* LegalAcceptViewController.swift */; };
 		BF66DE8B20D3A73500938637 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF66DE8D20D3A73500938637 /* background1.png */; };
@@ -28,6 +29,7 @@
 		BF0AE35120C6C6C000A68835 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		BF3D79D320C68D14008848DD /* ChangelogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangelogViewController.swift; sourceTree = "<group>"; };
 		BF4F7EC420DA38AE0061F039 /* ChangelogStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ChangelogStrings.strings; sourceTree = "<group>"; };
+		BF4F7EC620DA83E40061F039 /* Multitextcolor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multitextcolor.swift; sourceTree = "<group>"; };
 		BF66DE8420D2680F00938637 /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
 		BF66DE8620D292BC00938637 /* LegalAcceptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalAcceptViewController.swift; sourceTree = "<group>"; };
 		BF66DE8C20D3A73500938637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/background1.png; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				BF0AE35120C6C6C000A68835 /* Variables.swift */,
 				BF66DE8F20D3AA6E00938637 /* Functions.swift */,
+				BF4F7EC620DA83E40061F039 /* Multitextcolor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4F7EC720DA83E40061F039 /* Multitextcolor.swift in Sources */,
 				E6E487671F35D345006B31C1 /* ViewController.swift in Sources */,
 				E6E487771F35E682006B31C1 /* ImageViewController.swift in Sources */,
 				BF66DE8520D2680F00938637 /* LegalViewController.swift in Sources */,

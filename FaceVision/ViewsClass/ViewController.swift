@@ -18,6 +18,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var settingsPlusButton: UIButton!
     @IBOutlet weak var moreInformationPlusButton: UIButton!
     @IBOutlet weak var textVersionView: UITextView!
+    @IBOutlet weak var textFaceVision: UILabel!
     
     var image: UIImage!
     
@@ -41,6 +42,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         moreInformationPlusButton.layer.borderWidth = 2
         settingsPlusButton.layer.cornerRadius = 7
         settingsPlusButton.layer.borderWidth = 2
+        
+        //------------------------------------------------------
+        //Colors
+        let stringValue = "FaceVision"
+        let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: stringValue)
+        attributedString.setColorForText(textForAttribute: "Face", withColor: UIColor.white)
+        attributedString.setColorForText(textForAttribute: "Vision", withColor: UIColor.green)
+        textFaceVision.font = UIFont.boldSystemFont(ofSize: 40)
+        textFaceVision.attributedText = attributedString
+        //------------------------------------------------------
         
         addBackgroundImage(name: "background1.png")
         
