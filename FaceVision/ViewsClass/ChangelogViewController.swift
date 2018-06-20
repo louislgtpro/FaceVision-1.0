@@ -17,10 +17,11 @@ class ChangelogViewController: UIViewController{
     @IBOutlet weak var changeLogButton: UIButton!
     @IBOutlet weak var majButton: UIButton!
     
-    private var appVersionBundle = 11
+    var CHANGELOG_ACTUAL = ""
+    
+    private var appVersionBundle = 12
     private var neededCountUpdate = 1
     private var secondsUpdate = 5
-    private var timer = Timer()
     
     let appBuildNumber = Bundle.main.infoDictionary!["CFBundleVersion"] as! String
     let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
@@ -38,42 +39,6 @@ class ChangelogViewController: UIViewController{
         majButton.layer.borderWidth = 2
 
     }
-    
-    @IBAction func StartLoading(_ sender: Any){
-        StartLoadingIndicator()
-    }
-    
-    @IBAction func StopLoading(_ sender: Any){
-        StopLoadingIndicator()
-    }
-    
-    func StartLoadingIndicator(){
-        self.view.addSubview(firstView)
-    }
-    
-    func StopLoadingIndicator(){
-        self.view.removeFromSuperview()
-    }
-    
-    func InitializeLoading(){
-        firstView = UIView(frame: CGRect(x: 0, y:0, width: 250, height: 50))
-        firstView.backgroundColor = UIColor.darkGray
-        firstView.layer.cornerRadius = 10
-        
-        let wait = UIActivityIndicatorView(frame: CGRect(x:0, y:0, width: 50, height: 50))
-        wait.color = UIColor.black
-        wait.hidesWhenStopped = false
-        wait.startAnimating()
-        
-        let text = UILabel(frame: CGRect(x: 60, y: 0, width: 200, height: 50))
-        text.text = "Veuillez patienter..."
-        
-        firstView.addSubview(wait)
-        firstView.addSubview(text)
-        firstView.center = self.view.center
-        firstView.tag = 1000
-    }
-    
     func isConnectedToNetwork() -> Bool {
         
         var zeroAddress = sockaddr_in()
@@ -125,7 +90,7 @@ class ChangelogViewController: UIViewController{
                 }))
                 self.present(majPopup, animated: true)
             }else{
-                let noMajAvailable = UIAlertController(title: "Aucune mise à jour disponible", message: "Aucune mise à jour disponible n'a été trouvée, vous disposez actuellement de la dernière version disponible à ce jour (Version : 1.0B\(appBuildNumber)). Malgré tout, si vous êtes persuadé que une mise à jour est disponible plusieurs facteurs peuvent être raisons de cette erreur : \n\n- Assurez-vous d'être connecté à internet \n- Assurez-vous de toujours faire partie du programme bêta de FaceVision\n- Assurez-vous d'avoir le Build 10 installé au minimum\n\n Si l'erreur persiste après toute les vérifications ci-dessus, merci de nous contacter à problems@facevision.be", preferredStyle: .alert)
+                let noMajAvailable = UIAlertController(title: "Aucune mise à jour disponible", message: "Aucune mise à jour disponible n'a été trouvée, vous disposez actuellement de la dernière version disponible à ce jour (Version : 1.0B\(appBuildNumber)). Malgré tout, si vous êtes persuadé que une mise à jour est disponible plusieurs facteurs peuvent être raisons de cette erreur : \n\n- Assurez-vous d'être connecté à internet \n- Assurez-vous de toujours faire partie du programme bêta de FaceVision\n- Assurez-vous d'avoir la Bêta 10 installée au minimum\n\n Si l'erreur persiste après toute les vérifications ci-dessus, merci de nous contacter à problems@facevision.be", preferredStyle: .alert)
                 noMajAvailable.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
                 self.present(noMajAvailable, animated: true)
             }
@@ -170,18 +135,6 @@ class ChangelogViewController: UIViewController{
             changeLog4P.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
             self.present(changeLog4P, animated: true)
         }
-        
-        if number == 5{
-            
-        }
-        
-        if number == 6{
-            
-        }
-        
-        if number == 7{
-            
-        }
     }
     
     func errorBuildNumber(){
@@ -194,7 +147,7 @@ class ChangelogViewController: UIViewController{
     }
     
     func changeLogBuildActual(){
-        let changeLogActual = UIAlertController(title: "CHANGELOG V1.0 Build \(appBuildNumber)", message: "- Modifications et nouveautés -\n\n- Amélioration du design intérieur\n- Amélioration de la propreté du code interne\n- Rapidité et fluidité en terme général amélioré\n- Corrections de bugs et ajout des CGU/Mentions légales\n", preferredStyle: .alert)
+        let changeLogActual = UIAlertController(title: "CHANGELOG V1.0 Build \(appBuildNumber)", message: "- Modifications et nouveautés -\n\n \(CHANGELOG_ACTUAL)", preferredStyle: .alert)
         changeLogActual.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         self.present(changeLogActual, animated: true)
     }

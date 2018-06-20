@@ -23,7 +23,6 @@ class ImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        InitializeLoading()
         addBackgroundImage(name: "backgroundimagecontroller.png")
         imageView.image = image
         
@@ -40,39 +39,8 @@ class ImageViewController: UIViewController {
         self.view.insertSubview(backgroundImage, at: 0)
     }
     
-    @IBAction func StartLoading(_ sender: Any){
-        StartLoadingIndicator()
-    }
-    
-    @IBAction func StopLoading(_ sender: Any){
-        StopLoadingIndicator()
-    }
-    
-    func StartLoadingIndicator(){
-        self.view.addSubview(firstview)
-    }
-    
-    func StopLoadingIndicator(){
-        self.firstview.removeFromSuperview()
-    }
-    
-    func InitializeLoading(){
-        firstview = UIView(frame: CGRect(x: 0, y:0, width: 250, height: 50))
-        firstview.backgroundColor = UIColor.white
-        firstview.layer.cornerRadius = 10
-        
-        let wait = UIActivityIndicatorView(frame: CGRect(x:0, y:0, width: 50, height: 50))
-        wait.color = UIColor.black
-        wait.hidesWhenStopped = false
-        wait.startAnimating()
-        
-        let text = UILabel(frame: CGRect(x: 60, y: 0, width: 200, height: 50))
-        text.text = "Veuillez patienter..."
-        
-        firstview.addSubview(wait)
-        firstview.addSubview(text)
-        firstview.center = self.view.center
-        firstview.tag = 1000
+    @IBAction func closeButtonSegue(_ sender: UIButton) {
+        performSegue(withIdentifier: "closeButtonSegue", sender: self)
     }
     
     @IBAction func process(_ sender: UIButton){
@@ -357,8 +325,6 @@ class ImageViewController: UIViewController {
         context?.setLineWidth(8.0)
         context?.drawPath(using: .stroke)
         context?.saveGState()
-        
-        
         
         // get the final image
         let finalImage = UIGraphicsGetImageFromCurrentImageContext()

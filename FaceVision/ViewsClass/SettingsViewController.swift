@@ -10,7 +10,6 @@ import UIKit
 
 class SettingsViewController: UIViewController{
     
-    
     @IBOutlet weak var SwitchVisageOutler: UISwitch!
     
     override func viewDidLoad() {

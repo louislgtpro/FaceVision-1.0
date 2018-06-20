@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BF0AE35220C6C6C000A68835 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0AE35120C6C6C000A68835 /* Variables.swift */; };
 		BF3D79D420C68D14008848DD /* ChangelogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D79D320C68D14008848DD /* ChangelogViewController.swift */; };
+		BF4F7EC520DA38AE0061F039 /* ChangelogStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF4F7EC420DA38AE0061F039 /* ChangelogStrings.strings */; };
 		BF66DE8520D2680F00938637 /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66DE8420D2680F00938637 /* LegalViewController.swift */; };
 		BF66DE8720D292BC00938637 /* LegalAcceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66DE8620D292BC00938637 /* LegalAcceptViewController.swift */; };
 		BF66DE8B20D3A73500938637 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF66DE8D20D3A73500938637 /* background1.png */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		BF0AE35120C6C6C000A68835 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		BF3D79D320C68D14008848DD /* ChangelogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangelogViewController.swift; sourceTree = "<group>"; };
+		BF4F7EC420DA38AE0061F039 /* ChangelogStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ChangelogStrings.strings; sourceTree = "<group>"; };
 		BF66DE8420D2680F00938637 /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
 		BF66DE8620D292BC00938637 /* LegalAcceptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalAcceptViewController.swift; sourceTree = "<group>"; };
 		BF66DE8C20D3A73500938637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/background1.png; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		BF69E1E320D8FFEC002DFE4D /* Strings */ = {
 			isa = PBXGroup;
 			children = (
+				BF4F7EC420DA38AE0061F039 /* ChangelogStrings.strings */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				BF66DE8B20D3A73500938637 /* background1.png in Resources */,
 				BF66DE9720D3BF3300938637 /* backgroundimage1.png in Resources */,
 				BF66DE9520D3B90E00938637 /* backgroundphoto1.png in Resources */,
+				BF4F7EC520DA38AE0061F039 /* ChangelogStrings.strings in Resources */,
 				E6E4876A1F35D345006B31C1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

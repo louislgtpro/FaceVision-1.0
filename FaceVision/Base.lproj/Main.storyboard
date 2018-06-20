@@ -22,26 +22,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlc-4i-NrK">
-                                <rect key="frame" x="297" y="617" width="62" height="30"/>
-                                <state key="normal" title="Accepter"/>
+                                <rect key="frame" x="284" y="617" width="75" height="36"/>
+                                <color key="backgroundColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="MpU-ve-X0e"/>
+                                </constraints>
+                                <state key="normal" title="Accepter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="acceptTermsButton:" destination="ubG-9b-8Kv" eventType="touchUpInside" id="pyI-EY-nV3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CD-b6-vbZ">
-                                <rect key="frame" x="16" y="617" width="53" height="30"/>
-                                <state key="normal" title="Refuser"/>
+                                <rect key="frame" x="16" y="617" width="75" height="36"/>
+                                <color key="backgroundColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="3fM-1h-YBa"/>
+                                    <constraint firstAttribute="height" constant="36" id="vs5-z6-h3E"/>
+                                </constraints>
+                                <state key="normal" title="Refuser">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="denyTermsButton:" destination="ubG-9b-8Kv" eventType="touchUpInside" id="od9-xT-Fqv"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2I-la-t2g">
-                                <rect key="frame" x="16" y="60" width="343" height="549"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="16" y="60" width="343" height="561"/>
                                 <string key="text">Préambule  BV au capitale de 2 500 € RCS Antwerp Metropoliten 439 3233 2332 4424009 N°TVA : BE119894781 Siège social : Wilrijkstraat 26, 2140 Antwerpen, België  FaceVision est une personne morale représentée par Louis LEGOUT                                         ---  1. Utilisation, droits et devoirs :  Toute personne venant à utiliser l'application se doit d'avoir au préalable accepter non conditions d'utilisations sinon la personne se vera dans l'obligation de ne pas utiliser l'application. Un popup vous oblige a valider les conditions générales d'utilisations sans quoi vous vous verrez refuser l'accès à l'application.  Vous n'avez en aucun droit d'usurper, copier ou vous approprier les droits ou le nom de l'application.  Tout plagiat/usurpation/copié/coller est passible de 50 000€ d'amende et 2 ans de prison.  Vous vous devez d'utiliser l'application dans un but non lucratif est dans un cadre personnel et non professionnel. Si vous souhaitez utiliser l'application dans un autre but que celui-ci, merci de nous contacter à facevision@llegout.be.  Le projet est open source, il est donc possible de prendre une partie du code pour votre projet, mais vous n'avez pas le droit de vous y attribuer le bénéfice.</string>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="FaceVision" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glF-Oi-H6N">
                                 <rect key="frame" x="16" y="20" width="343" height="46"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="i4J-fV-K2H"/>
                                 </constraints>
@@ -52,26 +66,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="5CD-b6-vbZ" secondAttribute="bottom" constant="20" symbolic="YES" id="JNI-Sa-yJN"/>
-                            <constraint firstItem="y2I-la-t2g" firstAttribute="leading" secondItem="5CD-b6-vbZ" secondAttribute="leading" id="KBp-xr-jl4"/>
+                            <constraint firstItem="y2I-la-t2g" firstAttribute="trailing" secondItem="glF-Oi-H6N" secondAttribute="trailing" id="2aX-cM-VD9"/>
+                            <constraint firstItem="zlc-4i-NrK" firstAttribute="firstBaseline" secondItem="5CD-b6-vbZ" secondAttribute="baseline" id="3cS-ex-NcB"/>
+                            <constraint firstItem="y2I-la-t2g" firstAttribute="top" secondItem="2RQ-iW-sFg" secondAttribute="bottom" constant="40" id="GHD-2L-ASM"/>
                             <constraint firstItem="glF-Oi-H6N" firstAttribute="trailing" secondItem="FVS-qR-PYZ" secondAttribute="trailingMargin" id="P0z-jL-BDg"/>
                             <constraint firstItem="glF-Oi-H6N" firstAttribute="leading" secondItem="FVS-qR-PYZ" secondAttribute="leadingMargin" id="Phv-ZX-mbL"/>
-                            <constraint firstItem="5CD-b6-vbZ" firstAttribute="baseline" secondItem="zlc-4i-NrK" secondAttribute="baseline" id="SyT-6d-1i5"/>
-                            <constraint firstItem="y2I-la-t2g" firstAttribute="trailing" secondItem="zlc-4i-NrK" secondAttribute="trailing" id="UkJ-eS-KCM"/>
+                            <constraint firstItem="y2I-la-t2g" firstAttribute="leading" secondItem="5CD-b6-vbZ" secondAttribute="leading" id="Wlg-2u-Uhh"/>
+                            <constraint firstItem="y2I-la-t2g" firstAttribute="leading" secondItem="glF-Oi-H6N" secondAttribute="leading" id="aqS-Sq-dEz"/>
                             <constraint firstItem="glF-Oi-H6N" firstAttribute="top" secondItem="2RQ-iW-sFg" secondAttribute="bottom" id="dVb-31-Pu3"/>
-                            <constraint firstItem="glF-Oi-H6N" firstAttribute="leading" secondItem="y2I-la-t2g" secondAttribute="leading" id="mCf-QN-MKF"/>
-                            <constraint firstItem="glF-Oi-H6N" firstAttribute="trailing" secondItem="y2I-la-t2g" secondAttribute="trailing" id="mQD-qe-sk8"/>
-                            <constraint firstItem="y2I-la-t2g" firstAttribute="top" secondItem="2RQ-iW-sFg" secondAttribute="bottom" constant="40" id="pab-Sd-Fnw"/>
-                            <constraint firstItem="5CD-b6-vbZ" firstAttribute="top" secondItem="y2I-la-t2g" secondAttribute="bottom" constant="8" symbolic="YES" id="rhL-Tn-OHa"/>
+                            <constraint firstItem="y2I-la-t2g" firstAttribute="trailing" secondItem="zlc-4i-NrK" secondAttribute="trailing" id="o9z-se-dQ3"/>
+                            <constraint firstItem="7ZO-pD-UD4" firstAttribute="top" secondItem="5CD-b6-vbZ" secondAttribute="bottom" constant="14" id="sYm-kd-xeQ"/>
+                            <constraint firstItem="zlc-4i-NrK" firstAttribute="top" secondItem="5CD-b6-vbZ" secondAttribute="top" id="wM4-gO-hg3"/>
+                            <constraint firstItem="7ZO-pD-UD4" firstAttribute="top" secondItem="y2I-la-t2g" secondAttribute="bottom" constant="46" id="x2k-6e-767"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="acceptButtonOutlet" destination="zlc-4i-NrK" id="gvs-tp-Lhk"/>
+                        <outlet property="denyButtonOutlet" destination="5CD-b6-vbZ" id="kM9-n2-7bz"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showPrincipalMenuSegue" id="FWX-Kv-KHs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bfl-Yv-ivj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1206" y="-279"/>
+            <point key="canvasLocation" x="-1207.2" y="-279.31034482758622"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="PfD-Qn-a3a">
@@ -112,7 +129,7 @@
                                 <state key="normal" title="Retour"/>
                                 <connections>
                                     <action selector="backButton:" destination="mbP-31-PZ9" eventType="touchUpInside" id="Z45-SK-LxA"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backSettingsButtonSegue" id="87x-1z-gdA"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="backSettingsButtonSegue" modalTransitionStyle="crossDissolve" id="87x-1z-gdA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -144,7 +161,7 @@
                                 <state key="normal" title="Retour"/>
                                 <connections>
                                     <action selector="backButton:" destination="SMA-qy-Cvg" eventType="touchUpInside" id="zwh-s6-hWy"/>
-                                    <segue destination="Gq8-60-ojo" kind="show" identifier="backLegalSegue" id="5aJ-61-Eq6"/>
+                                    <segue destination="Gq8-60-ojo" kind="presentation" identifier="backLegalSegue" modalTransitionStyle="crossDissolve" id="5aJ-61-Eq6"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="________________" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1R-A6-b9D">
@@ -207,7 +224,7 @@
                                 <state key="normal" title="Retour"/>
                                 <connections>
                                     <action selector="backActionButton:" destination="rZh-Cc-2Zg" eventType="touchUpInside" id="RKo-kf-G0P"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backButtonSegue" id="OIM-jf-Afv"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="backButtonSegue" modalTransitionStyle="crossDissolve" id="OIM-jf-Afv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnG-C2-cAM">
@@ -395,7 +412,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qZO-xp-E9E" kind="unwind" unwindAction="exitWithUnwindSegue:" id="ZuX-KM-jMt"/>
+                                    <action selector="closeButtonSegue:" destination="5mt-CK-KdS" eventType="touchUpInside" id="ik6-HL-xo9"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="closeButtonSegue" modalTransitionStyle="crossDissolve" id="hse-1m-tDX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -419,13 +437,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8k9-x4-6to" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="qZO-xp-E9E" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="502" y="495"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="87x-1z-gdA"/>
+        <segue reference="hse-1m-tDX"/>
         <segue reference="NK0-qJ-llw"/>
     </inferredMetricsTieBreakers>
 </document>

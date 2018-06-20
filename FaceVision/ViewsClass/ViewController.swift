@@ -27,7 +27,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     private var checkIfTapNoUpdate = false
     
     let isBetaKeyCorrect = UserDefaults.standard.bool(forKey: "isBetaKeyCorrect")
-    let popupBetaWelcomeClicked = UserDefaults.standard.bool(forKey: "popupBetaWelcomeClicked")
     let majUpdateCorrectly = UserDefaults.standard.bool(forKey: "majUpdateCorrectly")
     let appBuildNumber = Bundle.main.infoDictionary!["CFBundleVersion"] as! String
     let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
@@ -49,13 +48,44 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NotificationCenter.default.addObserver(self, selector: #selector(self.callBackForBackgroundNotification), name: UIApplication.willResignActiveNotification, object: nil)
         
         //Checks vars
-        print (popupBetaWelcomeClicked)
         print (isBetaKeyCorrect)
         print("Version of the App : 1.0B ", appBuildNumber)
     }
     
-    func InitLayersCornerRadius(){
+    override func viewWillAppear(_ animated: Bool) {
+        if isBetaKeyCorrect == false{
+            if isConnectedToNetwork() == true{
+                self.alertStart()
+            }else{
+                self.noInternetConnectionPopup()
+            }
+        }
+        if isConnectedToNetwork() == false{
+            self.noInternetConnectionAlert()
+        }
+        
+        if majUpdateCorrectly == false{
+            self.succefulUpdate()
+        }
+    }
     
+    @objc func callBackForBackgroundNotification(){
+        if isBetaKeyCorrect == false{
+            if isConnectedToNetwork() == true{
+                self.alertStart()
+            }else{
+                self.noInternetConnectionPopup()
+            }
+        }
+    }
+    @objc func callBackForActiveNotification(){
+        if isBetaKeyCorrect == false{
+            if isConnectedToNetwork() == true{
+                self.alertStart()
+            }else{
+                self.noInternetConnectionPopup()
+            }
+        }
     }
     
     func isConnectedToNetwork() -> Bool {
@@ -89,7 +119,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func noInternetConnectionPopup(){
         let noInternetConnection = UIAlertController(title: "Aucune connexion à internet", message: "Vous devez être connecté à internet afin de pouvoir entrer votre clé bêta. Merci de réessayer quand vous serez connecté à internet (2G, 3G, 4G (LTE), WiFi)", preferredStyle: .alert)
-        noInternetConnection.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        noInternetConnection.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (UIAlertAction) in
+            Foundation.exit(-1)
+        }))
         self.present(noInternetConnection, animated: true)
     }
     
@@ -97,49 +129,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let noInternetConnection = UIAlertController(title: "Aucune connexion à internet", message: "Certaines fonctionnalités de l'application ne pourront pas être utilisées si vous n'êtes pas connecté à internet, il est préférable de s'y connecter pour assurer une meilleure stabilité en cas de crash.", preferredStyle: .alert)
         noInternetConnection.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         self.present(noInternetConnection, animated: true)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        if isConnectedToNetwork() == false && isBetaKeyCorrect == true{
-            self.noInternetConnectionAlert()
-        }
-        
-        if isBetaKeyCorrect == false{
-            if isConnectedToNetwork() == true{
-                self.alertStart()
-            }else{
-                self.noInternetConnectionPopup()
-            }
-        }
-        
-        if majUpdateCorrectly == false{
-            self.succefulUpdate()
-        }else{
-            
-        }
-        
-        if isBetaKeyCorrect == true && popupBetaWelcomeClicked == false{
-            self.welcomeBetaPopup()
-        }
-    }
-    
-    @objc func callBackForBackgroundNotification(){
-        if isBetaKeyCorrect == false{
-            if isConnectedToNetwork() == true{
-                self.alertStart()
-            }else{
-                self.noInternetConnectionPopup()
-            }
-        }
-    }
-    @objc func callBackForActiveNotification(){
-        if isBetaKeyCorrect == false{
-            if isConnectedToNetwork() == true{
-                self.alertStart()
-            }else{
-                self.noInternetConnectionPopup()
-            }
-        }
     }
     
     func succefulUpdate(){
@@ -150,15 +139,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.present(changeLogActual, animated: true)
     }
     
-    func welcomeBetaPopup(){
-        let welcomeBeta = UIAlertController(title: "- Betamodus -", message: "Dag! En welkom in de beta-versie van de FaceVision-applicatie. Dank u voor uw deelname aan het bèta programma van de applicatie, als u problemen, bugs of crashes stuur ons alle informatie die u kon herstellen tijdens het probleem tegenkomt.", preferredStyle: .alert)
-        
-        welcomeBeta.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (UIAlertAction) in
-            UserDefaults.standard.set(true, forKey: "popupBetaWelcomeClicked")
-        }))
-        
-        self.present(welcomeBeta, animated: true)
-    }
     
     func alertUpdateAvailable(){
         let alertUpdate = UIAlertController(title: "Une mise à jour est disponible", message: "Une mise à jour de l'application est disponible, voulez-vous la lancer maintenant ?\n\nVersion de la MAJ : 1.0B\(appBuildNumber)\nChangements : ", preferredStyle: .alert)
@@ -233,11 +213,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //Take a photo code
     @IBAction func takePhoto(_ sender: UIButton) {
-        if countUpdateNeeded == 1 && checkIfTapNoUpdate == false{
-            self.alertUpdateAvailable()
-        }else{
-            takePhotoChoose()
-        }
+        self.takePhotoChoose()
     }
     
     func takePhotoChoose(){
@@ -266,7 +242,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
         image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         performSegue(withIdentifier: "showImageSegue", sender: self)
     }
