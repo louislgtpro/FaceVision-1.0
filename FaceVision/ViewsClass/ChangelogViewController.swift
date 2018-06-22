@@ -17,9 +17,9 @@ class ChangelogViewController: UIViewController{
     @IBOutlet weak var changeLogButton: UIButton!
     @IBOutlet weak var majButton: UIButton!
     
-    var CHANGELOG_ACTUAL = ""
+    var CHANGELOG_ACTUAL = "- Amélioration des performances et corrections de bugs\n- Correction du problème des popups qui réaparraissait lors du premier démarrage\n- Amélioration légère du design intérieur"
     
-    private var appVersionBundle = 12
+    private var appVersionBundle = 13
     private var neededCountUpdate = 1
     private var secondsUpdate = 5
     

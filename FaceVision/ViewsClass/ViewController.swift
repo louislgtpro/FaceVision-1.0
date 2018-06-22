@@ -24,8 +24,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     private var askUpdate = false
     private var countUpdateNeeded  = 2
-    private var appBuildNumberLocal = 10
+    private var appBuildNumberLocal = 13
     private var checkIfTapNoUpdate = false
+    private var CHANGELOG_UPDATE = "- Amélioration des performances et corrections de bugs\n- Correction du problème des popups qui réaparraissait lors du premier démarrage\n- Amélioration légère du design intérieur"
     
     let isBetaKeyCorrect = UserDefaults.standard.bool(forKey: "isBetaKeyCorrect")
     let majUpdateCorrectly = UserDefaults.standard.bool(forKey: "majUpdateCorrectly")
@@ -143,7 +144,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func succefulUpdate(){
-        let changeLogActual = UIAlertController(title: "Mise à jour installée !", message: "Une mise à jour a été installée avec succès, voici le contenu des nouveautés et modifications apportées à la mise à jour V1.0B \(appBuildNumber)\n\n  Modifications et nouveautés :\n\n- Amélioration du design intérieur\n- Amélioration de la propreté du code interne\n- Rapidité et fluidité en terme général amélioré\n- Corrections de bugs et ajout des CGU/Mentions légales\n", preferredStyle: .alert)
+        let changeLogActual = UIAlertController(title: "Mise à jour installée !", message: "Une mise à jour a été installée avec succès, voici le contenu des nouveautés et modifications apportées à la mise à jour V1.0B \(appBuildNumber)\n\n  Modifications et nouveautés :\n\n\(CHANGELOG_UPDATE)", preferredStyle: .alert)
         changeLogActual.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (UIAlertAction) in
             UserDefaults.standard.set(true, forKey: "majUpdateCorrectly")
         }))
