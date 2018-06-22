@@ -330,7 +330,6 @@
                                 </state>
                                 <connections>
                                     <action selector="settingsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SxN-ub-v1j"/>
-                                    <segue destination="mbP-31-PZ9" kind="show" identifier="showSettingsSegue" id="Yi6-Dq-V5z"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Version : " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFK-ts-TPm">
@@ -453,8 +452,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wea-lo-ESI"/>
-        <segue reference="hse-1m-tDX"/>
+        <segue reference="OIM-jf-Afv"/>
         <segue reference="NK0-qJ-llw"/>
     </inferredMetricsTieBreakers>
 </document>

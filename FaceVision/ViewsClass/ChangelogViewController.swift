@@ -142,7 +142,6 @@ class ChangelogViewController: UIViewController{
         errorBuildNumberP.addAction(UIAlertAction(title: "Réessayer", style: .cancel, handler: { (UIAlertAction) in
             self.changelogPopup()
         }))
-        
         self.present(errorBuildNumberP, animated: true)
     }
     

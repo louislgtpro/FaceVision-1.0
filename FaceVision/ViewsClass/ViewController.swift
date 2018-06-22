@@ -272,7 +272,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func settingsButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "showSettingsSegue", sender: self)
+        let settingsP = UIAlertController(title: "Bientôt...", message: "Cette fonctionnalité sera disponible très prochainement, restez au courrant des nouveautés à venir sur notre Twitter.", preferredStyle: .alert)
+        settingsP.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        self.present(settingsP, animated: true)
     }
 }
 
