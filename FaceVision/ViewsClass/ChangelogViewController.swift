@@ -19,7 +19,7 @@ class ChangelogViewController: UIViewController{
     
     var CHANGELOG_ACTUAL = "- Amélioration des performances et corrections de bugs\n- Correction du problème des popups qui réaparraissait lors du premier démarrage\n- Amélioration légère du design intérieur"
     
-    private var appVersionBundle = 13
+    private var appVersionBundle = 14
     private var neededCountUpdate = 1
     private var secondsUpdate = 5
     
