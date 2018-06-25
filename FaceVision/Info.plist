@@ -21,9 +21,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>L'accès à la caméra est nécéssaire afin de pouvoir faire de la reconnaissance faciale.</string>
+	<string>L&apos;accès à la caméra est nécéssaire afin de pouvoir faire de la reconnaissance faciale.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>L'accès à la bibliothèque de photos est nécéssaire afin de pouvoir récuperer des photos de la Pelicule</string>
+	<string>L&apos;accès à la bibliothèque de photos est nécéssaire afin de pouvoir récuperer des photos de la Pelicule</string>
 	<key>UIApplicationExitsOnSuspend</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
