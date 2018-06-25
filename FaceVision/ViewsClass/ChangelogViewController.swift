@@ -16,10 +16,13 @@ class ChangelogViewController: UIViewController{
     @IBOutlet weak var legalTermsButton: UIButton!
     @IBOutlet weak var changeLogButton: UIButton!
     @IBOutlet weak var majButton: UIButton!
+    @IBOutlet weak var faqOutletButton: UIButton!
+    
+    
     
     var CHANGELOG_ACTUAL = "- Amélioration des performances et corrections de bugs\n- Correction du problème des popups qui réaparraissait lors du premier démarrage\n- Amélioration légère du design intérieur"
     
-    private var appVersionBundle = 14
+    private var appVersionBundle = 15
     private var neededCountUpdate = 1
     private var secondsUpdate = 5
     
@@ -37,6 +40,8 @@ class ChangelogViewController: UIViewController{
         legalTermsButton.layer.borderWidth = 2
         majButton.layer.cornerRadius = 7
         majButton.layer.borderWidth = 2
+        faqOutletButton.layer.cornerRadius = 7
+        faqOutletButton.layer.borderWidth = 2
 
     }
     func isConnectedToNetwork() -> Bool {
@@ -70,6 +75,10 @@ class ChangelogViewController: UIViewController{
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func faqButton(_ sender: UIButton) {
+        
     }
     
     @IBAction func legalButton(_ sender: UIButton) {
@@ -160,7 +169,7 @@ class ChangelogViewController: UIViewController{
             let appBuildNumberInt: Int! = Int(self.appBuildNumber)
             
             if self.isConnectedToNetwork() == true{
-                if (textfieldInt <= appBuildNumberInt && textfieldInt >= 0){
+                if (textfieldInt <= appBuildNumberInt && textfieldInt >= 0 && textfieldInt != nil){
                     self.changeLogP(number: textfieldInt)
                 }else{
                     self.errorBuildNumber()
