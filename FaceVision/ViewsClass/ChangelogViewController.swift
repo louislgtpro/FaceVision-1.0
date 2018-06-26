@@ -17,9 +17,9 @@ class ChangelogViewController: UIViewController{
     @IBOutlet weak var changeLogButton: UIButton!
     @IBOutlet weak var majButton: UIButton!
     @IBOutlet weak var faqOutletButton: UIButton!
+    @IBOutlet weak var feedbackOutletButton: UIButton!
     
     var CHANGELOG_ACTUAL = "- Amélioration des performances et corrections de bugs\n- Correction du problème des popups qui réaparraissait lors du premier démarrage\n- Amélioration légère du design intérieur"
-    
     private var appVersionBundle = 15
     private var neededCountUpdate = 1
     private var secondsUpdate = 5
@@ -40,10 +40,11 @@ class ChangelogViewController: UIViewController{
         majButton.layer.borderWidth = 2
         faqOutletButton.layer.cornerRadius = 7
         faqOutletButton.layer.borderWidth = 2
-
+        feedbackOutletButton.layer.cornerRadius = 7
+        feedbackOutletButton.layer.borderWidth = 2
     }
+    
     func isConnectedToNetwork() -> Bool {
-        
         var zeroAddress = sockaddr_in()
         zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
         zeroAddress.sin_family = sa_family_t(AF_INET)
@@ -53,7 +54,6 @@ class ChangelogViewController: UIViewController{
                 SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
             }
         }
-        
         var flags = SCNetworkReachabilityFlags()
         if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
             return false
@@ -61,7 +61,6 @@ class ChangelogViewController: UIViewController{
         let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
         let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
         return (isReachable && !needsConnection)
-        
     }
     
     func addBackgroundImage(name: String){
@@ -76,7 +75,10 @@ class ChangelogViewController: UIViewController{
     }
     
     @IBAction func faqButton(_ sender: UIButton) {
-        
+    }
+    
+    @IBAction func feedbackButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "feedbackSegue", sender: self)
     }
     
     @IBAction func legalButton(_ sender: UIButton) {

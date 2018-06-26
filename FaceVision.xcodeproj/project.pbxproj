@@ -18,6 +18,7 @@
 		BF66DE9520D3B90E00938637 /* backgroundphoto1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF66DE9420D3B90D00938637 /* backgroundphoto1.png */; };
 		BF66DE9720D3BF3300938637 /* backgroundimage1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF66DE9620D3BF3200938637 /* backgroundimage1.png */; };
 		BFDB0EDA20C1286800A4CB2B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDB0ED920C1286800A4CB2B /* SettingsViewController.swift */; };
+		BFE4AC4420E243A100B726C8 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4AC4320E243A100B726C8 /* FeedbackViewController.swift */; };
 		E6E487651F35D345006B31C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E487641F35D345006B31C1 /* AppDelegate.swift */; };
 		E6E487671F35D345006B31C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E487661F35D345006B31C1 /* ViewController.swift */; };
 		E6E4876A1F35D345006B31C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6E487681F35D345006B31C1 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		BF66DE9420D3B90D00938637 /* backgroundphoto1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundphoto1.png; path = ../../../pictures/backgroundphoto1.png; sourceTree = "<group>"; };
 		BF66DE9620D3BF3200938637 /* backgroundimage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundimage1.png; path = ../../../pictures/backgroundimage1.png; sourceTree = "<group>"; };
 		BFDB0ED920C1286800A4CB2B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		BFE4AC4320E243A100B726C8 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		E6E487611F35D345006B31C1 /* FaceVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E487641F35D345006B31C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6E487661F35D345006B31C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				BF3D79D320C68D14008848DD /* ChangelogViewController.swift */,
 				BF66DE8420D2680F00938637 /* LegalViewController.swift */,
 				BF66DE8620D292BC00938637 /* LegalAcceptViewController.swift */,
+				BFE4AC4320E243A100B726C8 /* FeedbackViewController.swift */,
 			);
 			path = ViewsClass;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			files = (
 				BF4F7EC720DA83E40061F039 /* Multitextcolor.swift in Sources */,
 				E6E487671F35D345006B31C1 /* ViewController.swift in Sources */,
+				BFE4AC4420E243A100B726C8 /* FeedbackViewController.swift in Sources */,
 				E6E487771F35E682006B31C1 /* ImageViewController.swift in Sources */,
 				BF66DE8520D2680F00938637 /* LegalViewController.swift in Sources */,
 				BF66DE9020D3AA6E00938637 /* Functions.swift in Sources */,

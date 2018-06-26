@@ -153,6 +153,93 @@
             </objects>
             <point key="canvasLocation" x="1206" y="-279"/>
         </scene>
+        <!--Feedback View Controller-->
+        <scene sceneID="oeO-Ps-iRv">
+            <objects>
+                <viewController storyboardIdentifier="FeedbackViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OXk-GW-27N" customClass="FeedbackViewController" customModule="FaceVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pCV-fh-LO7"/>
+                        <viewControllerLayoutGuide type="bottom" id="lOh-W5-bdl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HhA-Q5-Re8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LST-Ae-9Gl">
+                                <rect key="frame" x="16" y="617" width="46" height="30"/>
+                                <state key="normal" title="Retour"/>
+                                <connections>
+                                    <segue destination="CvX-6H-hXt" kind="unwind" unwindAction="exitWithUnwindSegue:" id="fkx-GU-MEA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Signaler un bug" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTz-F1-dFk">
+                                <rect key="frame" x="54" y="28" width="266" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gi9-tj-gyq">
+                                <rect key="frame" x="102" y="422" width="170" height="32"/>
+                                <color key="backgroundColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="uGk-pY-myM"/>
+                                </constraints>
+                                <state key="normal" title="Envoyer le bug par mail">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w12-wc-IUh">
+                                <rect key="frame" x="83" y="462" width="208" height="32"/>
+                                <color key="backgroundColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="gtO-8m-cnf"/>
+                                </constraints>
+                                <state key="normal" title="Envoyer le bug par database">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendbyDatabaseButtonAction:" destination="OXk-GW-27N" eventType="touchUpInside" id="Hu4-ba-tGQ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cuw-Eo-eFo">
+                                <rect key="frame" x="22" y="84" width="331" height="315"/>
+                                <color key="backgroundColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rTz-F1-dFk" firstAttribute="top" secondItem="pCV-fh-LO7" secondAttribute="bottom" constant="8" symbolic="YES" id="JwG-8M-0hk"/>
+                            <constraint firstItem="Cuw-Eo-eFo" firstAttribute="top" secondItem="rTz-F1-dFk" secondAttribute="bottom" constant="8" symbolic="YES" id="Kyl-7q-Vw8"/>
+                            <constraint firstItem="Cuw-Eo-eFo" firstAttribute="centerX" secondItem="Gi9-tj-gyq" secondAttribute="centerX" id="OLv-QS-iEX"/>
+                            <constraint firstItem="rTz-F1-dFk" firstAttribute="centerX" secondItem="HhA-Q5-Re8" secondAttribute="centerX" id="SF9-Qj-l3a"/>
+                            <constraint firstItem="w12-wc-IUh" firstAttribute="top" secondItem="Gi9-tj-gyq" secondAttribute="bottom" constant="8" symbolic="YES" id="Xqi-9L-Fxn"/>
+                            <constraint firstItem="lOh-W5-bdl" firstAttribute="top" secondItem="w12-wc-IUh" secondAttribute="bottom" constant="173" id="etG-6b-8pR"/>
+                            <constraint firstItem="Cuw-Eo-eFo" firstAttribute="leading" secondItem="HhA-Q5-Re8" secondAttribute="leadingMargin" constant="6" id="fNW-mK-EfP"/>
+                            <constraint firstItem="Cuw-Eo-eFo" firstAttribute="centerX" secondItem="rTz-F1-dFk" secondAttribute="centerX" id="hgV-7N-h6r"/>
+                            <constraint firstAttribute="bottom" secondItem="LST-Ae-9Gl" secondAttribute="bottom" constant="20" symbolic="YES" id="n5T-qc-yYU"/>
+                            <constraint firstItem="Gi9-tj-gyq" firstAttribute="leading" secondItem="HhA-Q5-Re8" secondAttribute="leadingMargin" constant="86" id="qYi-ON-NQL"/>
+                            <constraint firstItem="w12-wc-IUh" firstAttribute="leading" secondItem="HhA-Q5-Re8" secondAttribute="leadingMargin" constant="67" id="tHY-ry-VPt"/>
+                            <constraint firstItem="rTz-F1-dFk" firstAttribute="leading" secondItem="HhA-Q5-Re8" secondAttribute="leadingMargin" constant="38" id="vgk-LJ-MKe"/>
+                            <constraint firstItem="Gi9-tj-gyq" firstAttribute="top" secondItem="Cuw-Eo-eFo" secondAttribute="bottom" constant="23" id="yPx-LV-Kka"/>
+                            <constraint firstItem="Gi9-tj-gyq" firstAttribute="centerX" secondItem="w12-wc-IUh" secondAttribute="centerX" id="yWW-Wf-01f"/>
+                            <constraint firstItem="LST-Ae-9Gl" firstAttribute="leading" secondItem="HhA-Q5-Re8" secondAttribute="leadingMargin" id="zVZ-71-7FI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sendbydatabaseButton" destination="w12-wc-IUh" id="BlN-Jm-ZEV"/>
+                        <outlet property="sendbymailButton" destination="Gi9-tj-gyq" id="nMQ-kq-Iid"/>
+                        <outlet property="textField" destination="Cuw-Eo-eFo" id="D56-4S-ZDT"/>
+                        <outlet property="viewOutlet" destination="HhA-Q5-Re8" id="aNM-cJ-Kxy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A9w-S3-B8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="CvX-6H-hXt" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-290.39999999999998" y="-922.48875562218893"/>
+        </scene>
         <!--Changelog View Controller-->
         <scene sceneID="heh-ks-d7c">
             <objects>
@@ -226,21 +313,37 @@
                                     <segue destination="SMA-qy-Cvg" kind="show" identifier="legalPerformSegue" id="xMV-rH-qN4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZM-kS-kXJ">
+                                <rect key="frame" x="105" y="140" width="164" height="52"/>
+                                <color key="backgroundColor" red="0.1926269679" green="0.41053921580000002" blue="0.69150744819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Signaler un bug">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="feedbackButton:" destination="Gq8-60-ojo" eventType="touchUpInside" id="ZNk-m2-vj1"/>
+                                    <segue destination="OXk-GW-27N" kind="presentation" identifier="feedbackSegue" id="Aly-gq-FcG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="SDo-5K-i7N" firstAttribute="centerX" secondItem="xB9-mX-mbe" secondAttribute="centerX" id="2t4-h5-yNW"/>
+                            <constraint firstItem="OZM-kS-kXJ" firstAttribute="centerX" secondItem="xB9-mX-mbe" secondAttribute="centerX" id="5eC-G4-hfL"/>
                             <constraint firstItem="fMO-tb-Sw9" firstAttribute="top" secondItem="ZnG-C2-cAM" secondAttribute="bottom" constant="8" symbolic="YES" id="5o2-WR-ANL"/>
                             <constraint firstItem="SDo-5K-i7N" firstAttribute="top" secondItem="sQ6-oZ-Swm" secondAttribute="bottom" constant="180" id="JBq-4f-Ffs"/>
                             <constraint firstItem="fMO-tb-Sw9" firstAttribute="trailing" secondItem="jnq-gC-b58" secondAttribute="trailing" id="JNZ-gs-pOh"/>
+                            <constraint firstItem="OZM-kS-kXJ" firstAttribute="leading" secondItem="xB9-mX-mbe" secondAttribute="leadingMargin" constant="89" id="Rwx-oO-gZ4"/>
                             <constraint firstItem="U0C-4o-acZ" firstAttribute="top" secondItem="fMO-tb-Sw9" secondAttribute="bottom" constant="255" id="Xg6-mh-guJ"/>
                             <constraint firstItem="ZnG-C2-cAM" firstAttribute="centerY" secondItem="xB9-mX-mbe" secondAttribute="centerY" id="Z5I-vQ-PYe"/>
                             <constraint firstItem="fMO-tb-Sw9" firstAttribute="leading" secondItem="ZnG-C2-cAM" secondAttribute="leading" id="Zoc-qS-W77"/>
                             <constraint firstItem="fMO-tb-Sw9" firstAttribute="leading" secondItem="jnq-gC-b58" secondAttribute="leading" id="Zvz-KX-zGA"/>
                             <constraint firstItem="fMO-tb-Sw9" firstAttribute="trailing" secondItem="ZnG-C2-cAM" secondAttribute="trailing" id="aWC-mb-8q8"/>
+                            <constraint firstItem="OZM-kS-kXJ" firstAttribute="top" secondItem="sQ6-oZ-Swm" secondAttribute="bottom" constant="120" id="hWM-2J-isY"/>
                             <constraint firstItem="ZnG-C2-cAM" firstAttribute="top" secondItem="jnq-gC-b58" secondAttribute="bottom" constant="8" symbolic="YES" id="iZI-GU-cbB"/>
                             <constraint firstItem="jnq-gC-b58" firstAttribute="centerX" secondItem="xB9-mX-mbe" secondAttribute="centerX" id="tp9-tS-r0I"/>
                             <constraint firstItem="jnq-gC-b58" firstAttribute="top" secondItem="SDo-5K-i7N" secondAttribute="bottom" constant="8" symbolic="YES" id="yzA-I1-E5m"/>
+                            <constraint firstItem="SDo-5K-i7N" firstAttribute="top" secondItem="OZM-kS-kXJ" secondAttribute="bottom" constant="8" symbolic="YES" id="zgB-2g-7iC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="Wgx-Fo-3SQ">
@@ -249,6 +352,7 @@
                     <connections>
                         <outlet property="changeLogButton" destination="ZnG-C2-cAM" id="NBJ-pr-SBR"/>
                         <outlet property="faqOutletButton" destination="SDo-5K-i7N" id="HDm-Ah-J5N"/>
+                        <outlet property="feedbackOutletButton" destination="OZM-kS-kXJ" id="W6r-1A-l72"/>
                         <outlet property="firstView" destination="xB9-mX-mbe" id="dBU-K8-Jne"/>
                         <outlet property="legalTermsButton" destination="fMO-tb-Sw9" id="5uZ-UG-HVN"/>
                         <outlet property="majButton" destination="jnq-gC-b58" id="kGj-OP-xJG"/>
@@ -257,7 +361,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2si-b0-jOL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="rZh-Cc-2Zg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="380" y="-279"/>
+            <point key="canvasLocation" x="380" y="-279.31034482758622"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
