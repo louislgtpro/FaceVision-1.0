@@ -88,7 +88,7 @@
 ### 1.0B13:
 
 - Bug fixes and improvements
-- Add no internet connection warning when try to first start the app
+- Add no internet connection warning when try to first start the app without the internet
 
 ### 1.0B14:
 
