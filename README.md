@@ -1,5 +1,19 @@
 # FaceVision 1.0
 
+## Changelog
+
+### 1.0B1:
+
+- First release of FaceVision
+
+### 1.0B2:
+
+- Bug fixes and improvements
+
+---
+
+## Terms and conditions
+
 FaceVision is a private 2D advanced Face recognition project. This project was start since 1 month.
 
 LET OP: Het is ten strengste verboden om je de code of het project toe te eigenen, als je een stuk code of een klasse wilt lenen of als je vragen hebt. Stuur mij een bericht voordat u zich de oorzaak.
@@ -13,8 +27,6 @@ ATENCIÓN: Está estrictamente prohibido apropiarse del código o del proyecto, 
 WARNING: It is strictly forbidden to appropriate you the code or the project, if you wish to borrow a piece of code or a class or if you have some questions. Send me a message before you appropriate you the cause, effects.
 
 ATTENTION : Il est strictement interdit de s'approprier le code ou le projet, si vous souhaitez emprunter un bout de code ou une classe ou si vous avez des questions. Envoyez moi un message avant de vous en approprier la cause.
-
-Thank you for your comprehension. 
 
 
 
