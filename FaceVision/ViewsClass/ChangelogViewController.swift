@@ -19,8 +19,8 @@ class ChangelogViewController: UIViewController{
     @IBOutlet weak var faqOutletButton: UIButton!
     @IBOutlet weak var feedbackOutletButton: UIButton!
     
-    var CHANGELOG_ACTUAL = "- Amélioration des performances et corrections de bugs\n- Correction du problème des popups qui réaparraissait lors du premier démarrage\n- Amélioration légère du design intérieur"
-    private var appVersionBundle = 15
+    var CHANGELOG_ACTUAL = "- Amélioration des performances et corrections de bugs\n- Ajout d'un Feedback\n- Amélioration légère du design intérieur"
+    private var appVersionBundle = 17
     private var neededCountUpdate = 1
     private var secondsUpdate = 5
     
@@ -31,9 +31,7 @@ class ChangelogViewController: UIViewController{
         super.viewDidLoad()
         print("ChangelogViewController has been loaded")
         addBackgroundImage(name: "backgroundphoto1.png")
-        
-        changeLogButton.layer.cornerRadius = 7
-        changeLogButton.layer.borderWidth = 2
+    
         legalTermsButton.layer.cornerRadius = 7
         legalTermsButton.layer.borderWidth = 2
         majButton.layer.cornerRadius = 7
@@ -42,6 +40,9 @@ class ChangelogViewController: UIViewController{
         faqOutletButton.layer.borderWidth = 2
         feedbackOutletButton.layer.cornerRadius = 7
         feedbackOutletButton.layer.borderWidth = 2
+        changeLogButton.layer.cornerRadius = 7
+        changeLogButton.layer.borderWidth = 2
+        
     }
     
     func isConnectedToNetwork() -> Bool {
